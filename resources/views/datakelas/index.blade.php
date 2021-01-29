@@ -21,30 +21,29 @@
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th>Nama</th>
-                      <th>Email</th>
-                      <th>Level</th>
-                      <th>Options</th>
+                      <th>nama</th>
+                      <th>email</th>
+                      <th>level</th>
+                      <th>options</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($customerss as $Customers)
                     <tr>
-                        <td>({$customers->nama})</td>
-                        <td>({$customers->email})</td>
-                        <td>({$customers->level})</td>
+                      <th>siva</th>
+                      <th>sivafauziahfitri</th>
+                      <th>admin</th>
                       <th>
                         <a href="" class="btn btn-primary">Detail</a>
                         <a href="" class="btn btn-danger">Hapus</a>
                       </th>
                     </tr>
-                    @endforeach
                   </tbody>
                 </table>
-
               </div>
             </div>
           </div>
         </div>
-    
+      </div>
+    </div>
+
 @endsection
