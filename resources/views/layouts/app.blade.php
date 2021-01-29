@@ -21,8 +21,17 @@
 </head>
 <body>
     <div id="app">
-        @include('nav.nav')
-
+    <div class="row">
+        @include('nav.navHeader')
+        <div class="container-fluid">
+            <div class="row">
+                @include('nav.navSidebar')
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                    @include('welcomeSection')
+                    @yield('content')
+                </main>
+            </div>
+        </div>
     </div>
 </body>
 </html>

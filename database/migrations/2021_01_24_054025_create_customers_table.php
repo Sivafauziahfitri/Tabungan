@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDatakelasTable extends Migration
+class CreateCustomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateDatakelasTable extends Migration
      */
     public function up()
     {
-        Schema::create('datakelas', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
-            $table->string('level');
-            $table->string('options');
+            $table->string('alamat');
+            $table->string('telpon');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateDatakelasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('datakelas');
+        Schema::dropIfExists('customers');
     }
 }
